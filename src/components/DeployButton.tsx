@@ -12,7 +12,7 @@ interface DeployButtonProps {
   projectName?: string;
 }
 
-const DeployButton: React.FC<DeployButtonProps> = ({ generatedCode, projectName = 'my-website' }) => {
+const DeployButton: React.FC<DeployButtonProps> = ({ generatedCode, projectName = 'pagepilot-website' }) => {
   const [isDeploying, setIsDeploying] = useState(false);
 
   const generateFiles = () => {
@@ -96,7 +96,7 @@ ${generatedCode.html}
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: `karrish-${Date.now()}` }),
+        body: JSON.stringify({ name: `pagepilot-${Date.now()}` }),
       });
       const siteData = await deployRes.json();
 

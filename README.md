@@ -1,22 +1,22 @@
-# 🚀 KarRish — AI-Powered Website Generator
+# 🚀 PagePilot — AI-Powered Website Generator
 
-**KarRish** is a smart, elegant, and fully interactive AI-based website builder that lets users generate complete frontend websites using just natural language prompts.
+**PagePilot** is a smart, elegant, and fully interactive AI-based website builder that lets users generate complete frontend websites using just natural language prompts.
 
-✨ Whether you're a developer, designer, student, or someone with a brilliant idea but no coding experience — **KarRish helps you bring your vision to life in seconds.**
+✨ Whether you're a developer, designer, student, or someone with a brilliant idea but no coding experience — **PagePilot helps you bring your vision to life in seconds.**
 
-> Built with love and innovation by two brothers — **KAR**tik Shenoy and **RISH**abh Shenoy — hence the name **KarRish** 💡
+> Built with love and innovation — your AI-powered companion for web development 💡
 
 ---
 
 ## 🌍 Live Demo
 
-👉 Try it now: [https://karrish.netlify.app/](https://karrish.netlify.app/)
+👉 Try it now: [https://pagepilot.netlify.app/](https://pagepilot.netlify.app/)
 
 ---
 
-## 🧠 What is KarRish?
+## 🧠 What is PagePilot?
 
-KarRish is a frontend AI assistant that:
+PagePilot is a frontend AI assistant that:
 - Accepts prompts like “Create a portfolio site with a dark theme and contact form”
 - Uses **Gemini 2.5 (Google Generative AI)** to generate HTML, CSS, and JavaScript
 - Fetches beautiful royalty-free images from **Pexels API**
@@ -25,6 +25,8 @@ KarRish is a frontend AI assistant that:
 - Maintains your prompt history locally with timestamped sessions
 
 All packed into a beautifully designed React + Tailwind-powered interface.
+
+---
 
 ---
 
@@ -59,7 +61,7 @@ Built by two brothers united by curiosity and code:
 - **Kartik Shenoy** — Backend logic & data handling 🧠  
 - **Rishabh Shenoy** — Frontend wizardry & AI integration 🎨
 
-Together, we created KarRish to make the web more accessible, fun, and intelligent ✨
+Together, we created PagePilot to make the web more accessible, fun, and intelligent ✨
 
 ---
 
@@ -102,4 +104,4 @@ A warm thank you to Kartik Shenoy for suggesting his aspiration to build his web
 
 ---
 
-> _"The best way to predict the future is to build it."_ — Let's build it together with KarRish 🌐✨
+> _"The best way to predict the future is to build it."_ — Let's build it together with PagePilot 🌐✨
