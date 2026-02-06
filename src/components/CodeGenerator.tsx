@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import DeployButton from './DeployButton';
 import ChatHistory from './ChatHistory';
 import { 
   Code, 
@@ -167,7 +166,7 @@ const generateCode = async () => {
     const imageURL = await fetchPexelsImage(prompt);
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const systemPrompt = `You are an expert web developer. Generate clean, modern, and functional HTML, CSS, and JavaScript code based on the user's request.
 
@@ -253,9 +252,17 @@ try {
     setNeedsPreviewUpdate(true);
     setPrompt('');
 
-  } catch (err) {
-    setError('Failed to generate code. Please try again.');
+  } catch (err: any) {
     console.error('Error generating code:', err);
+    
+    // Handle quota exceeded error
+    if (err?.message?.includes('quota') || err?.message?.includes('429')) {
+      setError('⚠️ API quota exceeded! Your Gemini API key has reached its limit. Please wait a few minutes and try again, or use a different API key in your .env file.');
+    } else if (err?.message?.includes('API key')) {
+      setError('Invalid API key. Please check your VITE_GEMINI_API_KEY in the .env file.');
+    } else {
+      setError('Failed to generate code. Please try again in a moment.');
+    }
   } finally {
     setIsGenerating(false);
     setIsStreaming(false);
@@ -686,9 +693,6 @@ ${js}
               </div>
             </div>
           </div>
-            
-            {/* Deploy Section */}
-            <DeployButton generatedCode={generatedCode} projectName="ai-generated-website" />
           </div>
         )}
       </div>
